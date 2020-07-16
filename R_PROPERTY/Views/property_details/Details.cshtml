@@ -1,0 +1,43 @@
+﻿@model R_PROPERTY.Models.property_details
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>property_details</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.property_name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.property_name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.property_type)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.property_type)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.property_address)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.property_address)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.property_value)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.property_value)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.property_id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
